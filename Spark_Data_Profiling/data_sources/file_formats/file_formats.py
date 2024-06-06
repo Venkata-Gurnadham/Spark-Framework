@@ -12,7 +12,8 @@ spark = get_spark_session("data_profiling_columns")
 def file_formats(data_profiling_level):
     print("file_formats ******************")
     # Implementation for file format
-    column_name ='order_id'
+    # column_name ='order_id'
+    column_name = 'Country'
     dataset_name = ''
     file_df = read_file_formats(spark,input_data_path)
     if data_profiling_level == 'column_level_profiling':
