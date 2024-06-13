@@ -14,12 +14,12 @@ def file_formats(data_profiling_level):
     # Implementation for file format
     # column_name ='order_id'
     column_name = 'Country'
-    dataset_name = ''
+    # dataset_name = 'customers_dataset'
     file_df = read_file_formats(spark,input_data_path)
     if data_profiling_level == 'column_level_profiling':
         return column_level_profiling(file_df, column_name)
     elif data_profiling_level == "dataset_level_profiling":
-        return dataset_level_profiling(file_df, dataset_name)
+        return dataset_level_profiling(file_df)
     else:
         print("Please select the profiling level")
 # def file_format(parms):

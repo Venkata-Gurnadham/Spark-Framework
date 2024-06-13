@@ -24,12 +24,13 @@
 # sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 # from data_sources.read_data import read_data
 from data_sources.data_sources import data_sources
-from utils.spark_helper import get_spark_session
+# from utils.spark_helper import get_spark_session
 
 def main():
-    spark = get_spark_session("data_profiling_columns")
+    # spark = get_spark_session("data_profiling_columns")
     print("main**********************")
-    data_sources(data_source='file_formats')
-if __name__ == "__main__":
-    print("main ***************")
-    main()
+    data_source_out = data_sources(data_source='file_formats')
+    return data_source_out
+# if __name__ == "__main__":
+#     print("main ***************")
+#     main()

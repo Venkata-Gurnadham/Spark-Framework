@@ -14,7 +14,8 @@ def data_sources(data_source):
     
     # get the  function based on the data_source value
     selected_source = data_source_map.get(data_source)
-    data_profiling_level = 'column_level_profiling'
+    # data_profiling_level = 'column_level_profiling'
+    data_profiling_level = "dataset_level_profiling"
     if selected_source:
         print(f"data source execution started for {selected_source}")
         return selected_source(data_profiling_level)
